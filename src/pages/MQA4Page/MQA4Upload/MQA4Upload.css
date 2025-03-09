@@ -1,0 +1,161 @@
+/* ✅ ตั้งค่าคอนเทนเนอร์หลัก */
+.mqa4-upload-container {
+    text-align: center;
+    padding: 30px;
+    max-width: 1420px; /* ✅ กำหนดขนาดสูงสุด */
+    margin: 0 auto;
+}
+
+/* ✅ ปรับขนาดแถบหัวข้อให้กว้างเต็มจอ */
+.Upload-page-title {
+    background-color: #00CCCC;
+    margin-top: 150px; /* ✅ เพิ่มระยะห่างจากแถบเมนู */
+    height: 80px;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1420px;
+}
+
+/* ✅ ส่วนแสดงเอกสาร */
+.document-section {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.document-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* ✅ กล่องแสดงไฟล์ PDF */
+.document-upload {
+    display: inline-block;
+    background-color: #e0e0e0;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: normal;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+/* ✅ ปรับแต่งให้มีเงาเวลากด */
+.document-upload:hover {
+    background-color: #d6d6d6;
+}
+
+/* ✅ ส่วน Checkbox ยืนยันข้อมูล */
+.confirmation-section {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.confirmation-section input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.confirmation-section label {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* ✅ ปุ่มส่งเอกสาร */
+.submit-button {
+    background-color: #0056b3;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 250px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* ✅ ปรับให้ปุ่มเป็นสีเทาเมื่อ disable */
+.submit-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* ✅ เปลี่ยนสีเมื่อ hover (เฉพาะตอนเปิดใช้งาน) */
+.submit-button:hover:not(:disabled) {
+    background-color: #003f7f;
+}
+
+/* ✅ ปรับแต่ง footer */
+.footer {
+    background-color: #00CCCC;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: black;
+    margin-top: 50px;
+}
+
+/* ✅ สไตล์ของ Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* ✅ พื้นหลังดำโปร่งแสง */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+}
+
+/* ✅ วงกลมสีเขียว */
+.modal-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px auto;
+}
+
+/* ✅ รูปไอคอนเช็คถูก */
+.checkmark-image {
+    width: 80px; /* ✅ ปรับขนาดให้เหมาะสม */
+    height: 80px;
+}
+
+.confirm-button{
+    background-color: #0056b3;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 250px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.confirm-button:hover {
+    background-color: #003f7f;
+}

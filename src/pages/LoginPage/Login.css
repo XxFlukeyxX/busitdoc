@@ -1,0 +1,65 @@
+/* ✅ ทำให้ container อยู่กึ่งกลางหน้าจอ */
+.page-container {
+  display: flex;
+  flex-direction: column; /* ✅ เรียงแนวตั้ง */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* ✅ ทำให้สูงเต็มหน้าจอ */
+  background-color: #fff;
+  gap: 20px; /* ✅ ปรับระยะห่างระหว่างองค์ประกอบ */
+  padding: 20px;
+}
+
+/* ✅ ปรับขนาดโลโก้ */
+.login-logo {
+  width: 300px;
+  display: block;
+  margin-top: -50px;
+  margin-bottom: 30px;
+}
+
+/* ✅ ปรับสไตล์ของหัวข้อ */
+.login-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ✅ กล่องหลักสำหรับจัดตำแหน่ง */
+.login-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1; /* ✅ ช่วยดันให้ปุ่มไปอยู่ตรงกลาง */
+}
+
+/* ✅ ปรับระยะห่างของปุ่ม Google Login */
+.google-login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 300px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  margin-top: 30px;
+}
+
+.google-login-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* ✅ โลโก้ Google */
+.google-logo {
+  width: 20px;
+  height: 20px;
+}

@@ -1,0 +1,43 @@
+/* สไตล์พื้นฐานของ Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #00CCCC; /* สีพื้นหลัง */
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+/* Header ของหน้า Login (ไม่มีโลโก้ & ข้อความ) */
+.login-header {
+  justify-content: center; /* จัดกึ่งกลาง */
+}
+
+/* Header ของหน้าอื่นๆ (มีโลโก้และข้อความ) */
+.home-header {
+  justify-content: flex-start; /* โลโก้และข้อความอยู่ด้านซ้าย */
+}
+
+/* กล่องที่รวมโลโก้และข้อความ */
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 25px; /* ระยะห่างระหว่างโลโก้และข้อความ */
+}
+
+/* สไตล์โลโก้ */
+.header-logo {
+  height: 80px; /* ปรับขนาดโลโก้ */
+}
+
+/* สไตล์ข้อความ */
+.header-title {
+  font-size: 20px;
+  font-weight: normal;
+  color: #000; /* สีข้อความดำ */
+  white-space: nowrap; /* ป้องกันข้อความขึ้นบรรทัดใหม่ */
+}

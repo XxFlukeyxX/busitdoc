@@ -1,0 +1,133 @@
+/* ✅ ตั้งค่าคอนเทนเนอร์หลัก */
+.mqa3-insert5-container {
+    text-align: center;
+    padding: 30px;
+    max-width: 1420px;
+    margin: 0 auto;
+}
+
+/* ✅ หัวข้อใหญ่ */
+.form-title-mqa3-insert5 {
+    background-color: #00CCCC;
+    margin-top: 150px;
+    height: 80px;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1420px;
+}
+
+/* ✅ ตั้งค่าตารางทั้งหมด */
+.teaching-plan-table,
+.evaluation-plan-table,
+.grading-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* ✅ เส้นขอบตาราง */
+.teaching-plan-table th, .teaching-plan-table td,
+.evaluation-plan-table th, .evaluation-plan-table td,
+.grading-table th, .grading-table td {
+    border: 1px solid black;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* ✅ ทำให้ข้อมูลแต่ละคอลัมน์อยู่ชิดซ้าย */
+.teaching-plan-table .text-left,
+.evaluation-plan-table .text-left {
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* ✅ ทำให้หัวข้อตารางดูโดดเด่น */
+.teaching-plan-table th,
+.evaluation-plan-table th,
+.grading-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* ✅ จัดการเมื่อไม่มีข้อมูล */
+.no-data {
+    text-align: center;
+    font-style: italic;
+    color: gray;
+    font-size: 14px;
+}
+
+/* ✅ ปุ่มย้อนกลับ & ถัดไป */
+.button-container5 {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* ✅ ปรับขนาดปุ่ม */
+.back-btn5{
+    width: 150px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.next-btn5 {
+    width: 360px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    margin-right: 120px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* ✅ ปรับสีปุ่ม */
+.back-btn5 {
+    background-color: #142B68;
+    color: white;
+}
+
+.next-btn5 {
+    background-color: #1e4db7;
+    color: white;
+}
+
+/* ✅ ปรับสีเมื่อโฮเวอร์ */
+.back-btn5:hover {
+    background-color: #0f2255;
+}
+
+.next-btn5:hover {
+    background-color: #153a8f;
+}
+
+/* ✅ ปรับขนาดตาราง "เกณฑ์ค่าระดับคะแนน" */
+.grading-table {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* ✅ ทำให้หมายเหตุอ่านง่ายขึ้น */
+.grading-note {
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+    margin-top: 15px;
+    color: #555;
+    width: 100%;
+}

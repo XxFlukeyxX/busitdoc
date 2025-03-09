@@ -1,0 +1,169 @@
+/* ✅ ตั้งค่าคอนเทนเนอร์กลาง */
+.mqa3-insert4-container {
+    text-align: center;
+    padding: 30px;
+    max-width: 1420px;
+    margin: 0 auto;
+}
+
+/* ✅ หัวข้อใหญ่ */
+.form-title-mqa3-insert4 {
+    background-color: #00CCCC;
+    margin-top: 150px;
+    height: 80px;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1420px;
+}
+
+/* ✅ ตั้งค่ากลางของฟอร์ม */
+.form-container4 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1200px;
+    align-items: flex-start;
+    margin: 0 auto;
+}
+
+/* ✅ ปรับสไตล์ของ label (หัวข้อ) */
+.form-label {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* ✅ ตั้งค่าตาราง */
+.learning-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    table-layout: fixed;  /* ✅ บังคับให้ตารางมีขนาดคงที่ */
+}
+
+/* ✅ เส้นขอบตาราง */
+.learning-table th,
+.learning-table td {
+    border: 1px solid black;
+    padding: 15px;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+/* ✅ ทำให้หัวข้อตารางอยู่ตรงกลาง */
+.learning-table th {
+    font-weight: bold;
+    background-color: #f5f5f5;
+    vertical-align: middle;
+}
+
+/* ✅ ปรับขนาดของคอลัมน์ให้เท่ากัน */
+.learning-table th:nth-child(1),
+.learning-table td:nth-child(1) {
+    width: 5%; /* ✅ คอลัมน์เลือก ✔ */
+    text-align: center;
+    vertical-align: middle;
+}
+
+.learning-table th:nth-child(2),
+.learning-table td:nth-child(2) {
+    width: 30%; /* ✅ คอลัมน์ ผลการเรียนรู้ */
+    text-align: left;
+    padding-left: 15px;
+}
+
+.learning-table th:nth-child(3),
+.learning-table td:nth-child(3),
+.learning-table th:nth-child(4),
+.learning-table td:nth-child(4) {
+    width: 32.5%; /* ✅ คอลัมน์ วิธีการสอน และ วิธีการประเมินผล */
+}
+
+/* ✅ ปรับขนาดของช่องกรอกข้อมูล */
+.input-cell {
+    width: 95%;
+    min-height: 80px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 16px;
+    background-color: white;
+    box-sizing: border-box;
+    margin: auto;
+    display: block;
+    resize: vertical;
+}
+
+/* ✅ ป้องกัน radio button ทำให้ตารางเบี้ยว */
+.radio-cell {
+    text-align: center;
+    vertical-align: middle;
+    width: 5%;
+}
+
+/* ✅ จัด radio button ให้ตรง */
+.radio-cell input[type="radio"] {
+    transform: scale(1.2); /* ✅ ขยาย radio button นิดหน่อย */
+    margin: 0 auto;
+    display: block;
+}
+
+/* ✅ ปุ่มย้อนกลับ & ถัดไป */
+.button-container4 {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* ✅ ปรับขนาดปุ่ม */
+.back-btn4{
+    width: 150px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.next-btn4 {
+    width: 360px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    margin-right: 120px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* ✅ ปรับสีปุ่ม */
+.back-btn4 {
+    background-color: #142B68;
+    color: white;
+}
+
+.next-btn4 {
+    background-color: #1e4db7;
+    color: white;
+}
+
+/* ✅ ปรับสีเมื่อโฮเวอร์ */
+.back-btn4:hover {
+    background-color: #0f2255;
+}
+
+.next-btn4:hover {
+    background-color: #153a8f;
+}

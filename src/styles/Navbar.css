@@ -1,0 +1,100 @@
+/* ทำให้ Navbar อยู่บนสุดและล็อคอยู่กับที่ */
+.navbar {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #2EAEAE;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 999;
+}
+
+/* จัดระยะห่างของลิงก์เมนู */
+/* ✅ ขยับเมนูทางซ้ายเข้ามาทางขวา */
+.nav-links {
+  display: flex;
+  gap: 15px;
+  padding-left: 50px; /* ✅ ขยับเข้ามาทางขวา */
+}
+
+
+/* สไตล์ลิงก์ */
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+
+/* ✅ ขยับข้อมูลอาจารย์ + ปุ่มออกจากระบบไปทางซ้ายเล็กน้อย */
+.nav-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+  padding-right: 30px; /* ✅ ขยับเข้ามาจากขอบขวา */
+}
+
+/* ทำให้ "ออกจากระบบ" เป็นข้อความที่กดได้ */
+.logout-link {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.logout-link:hover {
+  text-decoration: underline;
+}
+
+/*--------------------------------------------------------ดรอปดาว--------------------------------------------------------------------------*/
+
+.dropdown-title{
+  font-size: 18px;
+}
+
+.dropdown-title:hover {
+  text-decoration: underline; /* เพิ่มเส้นขีดใต้ */
+}
+
+/* ✅ สไตล์ Dropdown */
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+/* ✅ ปรับสไตล์ตัวเลือกใน Dropdown */
+.dropdown-menu {
+  margin-top: 20px;
+  position: absolute;
+  left: 50%; /* ✅ กำหนดให้เริ่มกลางปุ่ม */
+  transform: translateX(-50%); /* ✅ เลื่อนกลับครึ่งหนึ่งของตัวเอง */
+  background-color: #2EAEAE;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 120px; /* ✅ ปรับความกว้างให้เหมาะสม */
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0;
+  border-radius: 5px; /* ✅ เพิ่มขอบโค้งให้สวยขึ้น */
+  z-index: 1000; /* ✅ ให้ dropdown อยู่บนสุด */
+}
+
+.dropdown-menu a {
+  padding: 8px 12px;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: #1a6363;  
+}

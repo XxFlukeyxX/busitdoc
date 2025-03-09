@@ -1,0 +1,163 @@
+/* ✅ ตั้งค่าคอนเทนเนอร์หลัก */
+.mqa3-insert6-container {
+    text-align: center;
+    padding: 30px;
+    max-width: 1420px;
+    margin: 0 auto;
+}
+
+/* ✅ หัวข้อหลัก */
+.form-title-mqa3-insert6 {
+    background-color: #00CCCC;
+    margin-top: 150px;
+    height: 80px;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1420px;
+}
+
+/* ✅ จัดให้มี 2 คอลัมน์ (ซ้าย-ขวา) */
+.form-container6 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* ✅ ตั้งค่าคอลัมน์ซ้าย & ขวา */
+.left-column, .right-column {
+    flex: 1;
+    text-align: left;
+}
+
+/* ✅ ตั้งค่ารูปแบบ Section */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+}
+
+/* ✅ หัวข้อแต่ละ Section */
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ✅ ปุ่มเพิ่ม */
+.add-btn {
+    background-color: #ccc;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.add-btn:hover {
+    background-color: #5a6268;
+}
+
+/* ✅ ปรับสไตล์ Input Row */
+.input-row {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* ✅ Input */
+.input-text {
+    width: 500px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #e0e0e0;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* ✅ ปุ่มลบ */
+.remove-btn {
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.remove-btn:hover{
+    background-color: #cc0000;
+}
+
+.button-container6 {
+    display: flex;
+    justify-content: flex-start; /* ✅ ปุ่มอยู่ชิดซ้าย */
+    align-items: center;
+    margin-top: 200px; /* ✅ เพิ่มระยะห่างจาก textarea */
+    margin-left: 800px;
+    gap: 10px; /* ✅ ระยะห่างระหว่างปุ่ม */
+}
+
+/* ✅ ปรับขนาดปุ่ม */
+.back-btn6{
+    width: 150px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.next-btn6 {
+    width: 450px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* ✅ ปรับสีปุ่ม */
+.back-btn6 {
+    background-color: #142B68;
+    color: white;
+}
+
+.next-btn6 {
+    background-color: #1e4db7;
+    color: white;
+}
+
+/* ✅ ปรับสีเมื่อโฮเวอร์ */
+.back-btn6:hover {
+    background-color: #0f2255;
+}
+
+.next-btn6:hover {
+    background-color: #153a8f;
+}

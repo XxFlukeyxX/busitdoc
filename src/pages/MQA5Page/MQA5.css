@@ -1,0 +1,107 @@
+/* ตั้งค่ากลางของหน้า Home */
+.mqa5-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* หัวข้อใหญ่ของหน้า */
+  .table-title-mqa5 {
+    background-color: #00CCCC;
+    margin-top: 150px;
+    height: 80px;
+    font-size: 24px;
+    font-weight: normal; /* ✅ ทำให้เด่นขึ้น */
+    text-align: center;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center; /* จัดตรงกลางแนวนอน */
+    align-items: center; /* จัดตรงกลางแนวตั้ง */
+  }
+  
+  /*--------------------------------------------------------ตาราง--------------------------------------------------------------------------*/
+  
+  /* ✅ กล่องของตาราง ไม่ให้ขยาย */
+  .table-container-mqa5 {
+    position: relative; /* ✅ เปลี่ยนจาก absolute เป็น relative */
+    width: 1400px;
+    height: 400px; /* ✅ กำหนดความสูงคงที่ */
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    overflow-y: auto; /* ✅ ให้เลื่อนขึ้นลงได้ */
+    margin-bottom: 10px; /* ✅ ป้องกันทับกับ Footer */
+  }
+  /* ตาราง */
+  table {
+    width: 100%;
+    border-collapse: separate; /* ✅ แก้จาก collapse เป็น separate */
+    border-spacing: 0px; /* ✅ ทำให้ไม่มีช่องว่างระหว่างเซลล์ */
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  /* ✅ กำหนดขนาดตารางให้คงที่ */
+  th, td {
+    min-width: 150px; /* ✅ ให้ช่องกว้างเท่าๆ กัน */
+    border: none; /* ❌ ลบเส้นขอบออก */
+  }
+  
+  /* ✅ หัวตาราง */
+  th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    padding: 12px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    border: none; /* ❌ ลบเส้นขอบหัวข้อ */
+  }
+  
+  /* ✅ แถวข้อมูล */
+  td {
+    padding: 10px;
+    text-align: center;
+    border: none; /* ❌ ลบเส้นขอบออก */
+  }
+  
+  /* ✅ ป้องกันตารางขยายเกินขนาด */
+  tbody {
+    display: block;
+    max-height: 330px; /* ✅ จำกัดพื้นที่ */
+    overflow-y: auto;
+  }
+  
+  thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed; /* ✅ ทำให้ช่องไม่ขยาย */
+  }
+  
+  /* ✅ ทำให้แถวสลับสี เพื่อให้อ่านง่าย */
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+    /*-------------------------------------------------------- ปุ่มดึงรายวิชา --------------------------------------------------------------------------*/
+.fetch-subjects-btn {
+  background-color: #d3d3d3; /* สีเทาอ่อน */
+  color: black;
+  font-size: 16px;
+  font-weight: normal;
+  border: 1px solid black; /* ✅ เส้นขอบสีดำ */
+  border-radius: 30px; /* ✅ ทำให้ขอบโค้ง */
+  padding: 10px 25px;
+  float: right;
+  cursor: pointer;
+  outline: none;
+  display: block;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.fetch-subjects-btn:hover {
+  background-color: #c0c0c0; /* ✅ เปลี่ยนสีเมื่อ hover */
+}

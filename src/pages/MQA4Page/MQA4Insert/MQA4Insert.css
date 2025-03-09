@@ -1,0 +1,118 @@
+.mqa4-insert-container {
+    text-align: center;
+    padding: 30px;
+    max-width: 1420px;
+    margin: 0 auto;
+}
+
+.form-title-mqa4-insert {
+    background-color: #00CCCC;
+    margin-top: 150px;
+    height: 80px;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    max-width: 100%;
+}
+
+/* ✅ จัดตำแหน่งของเลย์เอาต์ให้เหมือนในรูป */
+.mqa4-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 5px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* ✅ ฟอร์มหลักอยู่ด้านซ้าย */
+.mqa4-form {
+    flex: 2;
+    max-width: 100%;
+    text-align: left;
+}
+
+/* ✅ ป้องกันข้อความขึ้นบรรทัดใหม่ */
+label {
+    display: block; /* ✅ ทำให้ label อยู่เต็มบรรทัดและช่องกรอกอยู่ด้านล่าง */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* ✅ ข้อ 1: จัดช่องกรอก 3 ช่องให้อยู่ในแนวยาวเดียวกัน */
+.input-container-mqa4 {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+.input-container-mqa4 input {
+    width: calc(33.33% - 8px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    text-align: center;
+}
+
+/* ✅ ปรับให้ช่องกรอกข้อมูลอยู่ใต้ label ของแต่ละข้อ */
+.full-width-input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    text-align: center;
+    margin-top: 5px; /* ✅ เพิ่มระยะห่างจาก label */
+}
+
+/* ✅ กล่องคำอธิบายอยู่ทางขวาและชิดขอบ */
+.mqa4-description {
+    flex: 1;
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    max-width: 100%;
+}
+
+/* ✅ ปรับช่องกรอกคำอธิบายให้ใหญ่ขึ้น */
+.description-box {
+    width: 450px;
+    height: 180px;
+    border: none;
+    background: white;
+    font-size: 16px;
+    resize: vertical;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* ✅ ปรับตำแหน่งปุ่มให้ไปอยู่ใต้ฟอร์ม */
+.form-submit {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 20px;
+    padding-left: 15px;
+}
+
+/* ✅ ปรับขนาดปุ่ม */
+.submit-btn {
+    background-color: #0056b3;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 250px;
+    text-align: center;
+}

@@ -1,0 +1,156 @@
+/* ✅ ตั้งค่าคอนเทนเนอร์หลัก */
+.mqa3-insert7-container {
+    text-align: center;
+    padding: 30px;
+    max-width: 1420px;
+    margin: 0 auto;
+}
+
+/* ✅ หัวข้อหลัก */
+.form-title-mqa3-insert7 {
+    background-color: #00CCCC;
+    margin-top: 150px;
+    height: 80px;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1420px;
+}
+
+/* ✅ ตั้งค่า Layout ให้แยกเป็น 2 คอลัมน์ (ซ้าย: ข้อ 1-3 | ขวา: ข้อ 4-5) */
+.form-container7 {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* ✅ ตั้งค่าคอลัมน์ซ้าย (ข้อ 1-3) */
+.left-column {
+    width: 48%;
+    text-align: left;
+}
+
+/* ✅ ตั้งค่าคอลัมน์ขวา (ข้อ 4-5) */
+.right-column {
+    width: 48%;
+    text-align: left;
+}
+
+/* ✅ ปรับสไตล์ Section */
+.form-section7 {
+    margin-bottom: 20px;
+}
+
+/* ✅ หัวข้อแต่ละ Section */
+.section-header7 {
+    display: flex;
+    align-items: center;
+   
+}
+
+/* ✅ ปรับสไตล์ Input Row */
+.input-row7 {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* ✅ Input */
+.input-text7 {
+    width: 500px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #e0e0e0;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* ✅ ปุ่มลบ */
+.remove-btn {
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.remove-btn:hover{
+    background-color: #cc0000;
+}
+
+
+.input-textarea7{
+    width: 500px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #e0e0e0;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* ✅ ปุ่มย้อนกลับ & ถัดไป (ให้อยู่ใต้ textarea) */
+.button-container7 {
+    display: flex;
+    justify-content: flex-end; /* ✅ ปุ่มอยู่ชิดซ้าย */
+    align-items: center;
+    margin-top: 20px; /* ✅ เพิ่มระยะห่างจาก textarea */
+    gap: 10px; /* ✅ ระยะห่างระหว่างปุ่ม */
+}
+
+/* ✅ ปรับขนาดปุ่ม */
+.back-btn7{
+    width: 150px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.save-btn7 {
+    width: 350px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* ✅ ปรับสีปุ่ม */
+.back-btn7 {
+    background-color: #142B68;
+    color: white;
+}
+
+.save-btn7 {
+    background-color: #1e4db7;
+    color: white;
+}
+
+/* ✅ ปรับสีเมื่อโฮเวอร์ */
+.back-btn7:hover {
+    background-color: #0f2255;
+}
+
+.save-btn7:hover {
+    background-color: #153a8f;
+}

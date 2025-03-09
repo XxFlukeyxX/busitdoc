@@ -1,0 +1,112 @@
+/* ✅ ตั้งค่ากลางของหน้า */
+.mqa3-insert-container {
+    text-align: center;
+    padding: 30px;
+    max-width: 1420px; /* ✅ กำหนดขนาดสูงสุด */
+    margin: 0 auto;
+}
+
+/* ✅ ปรับขนาดแถบหัวข้อให้กว้างเต็มจอ */
+.form-title-mqa3-insert {
+    background-color: #00CCCC;
+    margin-top: 150px; /* ✅ เพิ่มระยะห่างจากแถบเมนู */
+    height: 80px;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1420px; /* ✅ ทำให้กว้างเต็มจอ */
+}
+
+
+
+/* ✅ คอลัมน์ซ้าย-ขวา */
+.form-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: flex-start; /* ✅ จัดให้หัวข้อแต่ละฝั่งอยู่ด้านบน */
+}
+
+/* ✅ แบ่งขนาดของแต่ละฝั่งให้ชัดขึ้น */
+.form-left, .form-right {
+    width: 50%; /* ✅ ปรับขนาดให้ฝั่งซ้าย-ขวา */
+}
+
+/* ✅ จัดรูปแบบช่องกรอกข้อมูล */
+.form-row {
+    display: flex;
+    align-items: center; /* ✅ จัดให้อยู่แนวเดียวกัน */
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* ✅ ปรับระยะห่างของ label */
+.form-row label {
+    font-weight: bold;
+    text-align: left;
+    width: 40%;
+}
+
+/* ✅ ปรับขนาดช่องอินพุต */
+.form-row input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    width: 60%; /* ✅ ปรับขนาดให้สัมพันธ์กับ label */
+    text-align: center;
+}
+
+.input-container-mqa3-insert {
+    display: flex;
+    gap: 10px;
+}
+
+.input-container-mqa3-insert input {
+    width: 150px; /* ✅ ปรับขนาดให้เท่ากัน */
+}
+
+/* ✅ ช่องหน่วยกิตให้มีขนาดเท่ากับช่องรหัสวิชา */
+.input-credit {
+    width: 150px !important;
+}
+
+/* ✅ ปรับขนาดของช่องต่าง ๆ ให้สัมพันธ์กัน */
+.input-curriculum, .input-major,
+.input-instructor, .input-semester,
+.input-prerequisite, .input-corequisite,
+.input-location, .input-last-update {
+    width: 100%;
+}
+
+/* ✅ ปรับแต่งปุ่มส่งข้อมูล */
+.form-submit {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.next-btn {
+    width: 400px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #1e4db7;
+    border: 1px solid black;
+    border-radius: 9px;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    display: block;
+    margin: 20px auto;
+}
+
+.next-btn:hover {
+    background-color: #153a8f;
+}
