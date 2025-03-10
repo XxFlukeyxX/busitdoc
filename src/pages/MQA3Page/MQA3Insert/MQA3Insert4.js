@@ -41,6 +41,7 @@ const MQA3Insert4 = () => {
     { id: 17, learningOutcome: "6.2 ปฏิบัติตามจรรยาบรรณวิชาชีพและมาตรฐานที่เกี่ยวข้อง", teachingMethod: "", assessmentMethod: "" },
     { id: 18, learningOutcome: "6.3 สามารถแก้ปัญหาเฉพาะทางในสาขาวิชาชีพได้อย่างเป็นระบบ", teachingMethod: "", assessmentMethod: "" },
   ]);
+  
 
   // ✅ ฟังก์ชันอัพเดตข้อมูลที่กรอกในตาราง
   const handleInputChange = (index, field, value, category) => {
@@ -123,15 +124,28 @@ const MQA3Insert4 = () => {
             </div>
           ))}
           </div>
-        {/* ✅ ปุ่มย้อนกลับ & ถัดไป */}
-        <div className="button-container4">
-          <button className="back-btn4" onClick={() => navigate("/mqa3-insert3")}>
-            ย้อนกลับ
-          </button>
-          <button className="next-btn4" onClick={() => navigate("/mqa3-insert5")}>
-            ถัดไป
-          </button>
-        </div>
+  <div className="button-container4">
+    <button className="back-btn4" onClick={() => navigate("/mqa3-insert3")}>
+      ย้อนกลับ
+    </button>
+  
+    {/* ✅ ปุ่มใหม่สำหรับดึงข้อมูล */}
+    <button
+      type="button"
+      className="fetch-btn4"
+      onClick={() => {
+        // TODO: เพิ่มโค้ดดึงข้อมูลจาก API ในอนาคต
+        console.log("คลิกปุ่มดึงข้อมูล");
+      }}
+    >
+      ดึงข้อมูล
+    </button>
+  
+    <button className="next-btn4" onClick={() => navigate("/mqa3-insert5")}>
+      ถัดไป
+    </button>
+  </div>
+
       </form>
     </div>
   );
