@@ -180,6 +180,7 @@ const MQA3Insert7 = () => {
     <button type="button" className="back-btn7" onClick={() => navigate("/mqa3-insert6")}>
       ย้อนกลับ
     </button>
+    <button type="button"className="fetch-btn7"onClick={() => {console.log("คลิกปุ่มดึงข้อมูล");}}>ดึงข้อมูล</button>
     <button type="button" className="save-btn7" onClick={() => navigate("/mqa3-upload")}>
       บันทึกและส่งเอกสาร
     </button>
