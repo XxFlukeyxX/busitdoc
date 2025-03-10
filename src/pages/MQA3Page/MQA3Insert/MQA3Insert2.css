@@ -177,4 +177,22 @@
     background-color: #cc0000;
 }
 
+.fetch-btn2{
+    width: 250px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #1e4db7;
+    border: 1px solid black;
+    border-radius: 9px;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    display: block;
+    margin: 20px auto;
+}
 
+.fetch-btn2:hover {
+    background-color: #153a8f;
+}
