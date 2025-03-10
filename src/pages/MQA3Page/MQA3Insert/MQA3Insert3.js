@@ -11,6 +11,11 @@ const MQA3Insert3 = () => {
   const [selfStudyHours, setSelfStudyHours] = useState("");
   const [consultationHours, setConsultationHours] = useState("");
 
+  const handleFetchData = () => {
+    console.log("Fetching data... (ในอนาคตจะเชื่อม API)");
+    // 🚀 ในอนาคตสามารถดึงข้อมูลจาก API และอัปเดต state formData ได้
+  };
+
   return (
     <div className="mqa3-insert3-container">
       <h2 className="form-title-mqa3-insert3">
@@ -89,6 +94,7 @@ const MQA3Insert3 = () => {
               <button className="back-btn3" onClick={() => navigate("/mqa3-insert2")}>
                 ย้อนกลับ
               </button>
+              <button type="button" className="fetch-btn3" onClick={handleFetchData}>ดึงข้อมูล</button>
               <button className="next-btn3" onClick={() => navigate("/mqa3-insert4")}>
                 ถัดไป
               </button>
