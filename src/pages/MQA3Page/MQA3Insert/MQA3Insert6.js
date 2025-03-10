@@ -94,6 +94,7 @@ const MQA3Insert6 = () => {
         {/* ✅ ปุ่มย้อนกลับ & ถัดไป */}
         <div className="button-container6">
           <button type="button" className="back-btn6" onClick={() => navigate("/mqa3-insert5")}>ย้อนกลับ</button>
+          <button type="button"className="fetch-btn6"onClick={() => {console.log("คลิกปุ่มดึงข้อมูล");}}>ดึงข้อมูล</button>
           <button type="button" className="next-btn6" onClick={() => navigate("/mqa3-insert7")}>ถัดไป</button>
         </div>
       </form>
