@@ -154,3 +154,22 @@
 .save-btn7:hover {
     background-color: #153a8f;
 }
+
+.fetch-btn7{
+    width: 250px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #1e4db7;
+    border: 1px solid black;
+    border-radius: 9px;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    display: block;
+}
+
+.fetch-btn7:hover {
+    background-color: #153a8f;
+}
