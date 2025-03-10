@@ -146,6 +146,7 @@ const MQA3Insert5 = () => {
           <button type="button" className="back-btn5" onClick={() => navigate("/mqa3-insert4")}>
             ย้อนกลับ
           </button>
+          <button type="button"className="fetch-btn5"onClick={() => {console.log("คลิกปุ่มดึงข้อมูล");}}>ดึงข้อมูล</button>
           <button type="button" className="next-btn5" onClick={() => navigate("/mqa3-insert6")}>
             ถัดไป
           </button>
