@@ -1,29 +1,51 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios"; // Add axios for API calls
 import "./MQA3Insert5.css";
-
 
 const MQA3Insert5 = () => {
   const navigate = useNavigate();
 
-  // ✅ ตั้งค่าข้อมูลตารางแผนการสอนเป็น **ว่างเปล่า**
+  // Set initial state for teaching plan and evaluation plan
   const [teachingPlan, setTeachingPlan] = useState([]);
-
-  // ✅ ตั้งค่าข้อมูลตารางการวัดผลเป็น **ว่างเปล่า**
   const [evaluationPlan, setEvaluationPlan] = useState([]);
+
+  // Function to fetch data from the API
+  const handleFetchData = async () => {
+    const courseCode = localStorage.getItem("courseCode"); // Get course_code from localStorage
+
+    if (!courseCode) {
+      alert("กรุณากรอกรหัสวิชา");
+      return;
+    }
+
+    try {
+      // Fetch teaching plan and evaluation plan data from the backend API
+      const response = await axios.get("http://127.0.0.1:5000/course-plan", {
+        params: { course_code: courseCode },
+      });
+
+      console.log("Teaching Plan Response:", response.data.teaching_plan); // Log the response to check the data
+      console.log("Evaluation Plan Response:", response.data.assessment_plan); // Log the response to check the data
+
+      // Update state with fetched data
+      setTeachingPlan(response.data.teaching_plan || []);
+      setEvaluationPlan(response.data.assessment_plan || []);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
 
   return (
     <div className="mqa3-insert5-container">
-      {/* ✅ หัวข้อหลัก */}
       <h2 className="form-title-mqa3-insert5">
         หมวดที่ 5 แผนการสอนและการประเมินผล รายวิชา ปัญญาประดิษฐ์
       </h2>
 
       <form className="mqa3-form">
         <div className="form-container5">
-          {/* ✅ หัวข้อ 1: แผนการสอน */}
+          {/* Teaching Plan Table */}
           <h3>1. แผนการสอน</h3>
-
           <table className="teaching-plan-table">
             <thead>
               <tr>
@@ -42,23 +64,22 @@ const MQA3Insert5 = () => {
               ) : (
                 teachingPlan.map((row, index) => (
                   <tr key={index}>
-                    <td>{row.week}</td>
-                    <td className="text-left">{row.topic}</td>
-                    <td>{row.hours}</td>
-                    <td className="text-left">{row.activities}</td>
-                    <td>{row.instructor}</td>
+                    <td>{row.week_number}</td> {/* แสดงสัปดาห์ที่ */}
+                    <td className="text-left">{row.teaching_plan_description}</td> {/* แสดงหัวข้อ/รายละเอียด */}
+                    <td>{row.total_hours}</td> {/* แสดงจำนวนชั่วโมง */}
+                    <td className="text-left">{row.activity_performed}</td> {/* แสดงกิจกรรมการเรียนการสอนและสื่อที่ใช้ */}
+                    <td>{row.teacher_firstname} {row.teacher_surname}</td> {/* แสดงผู้สอน */}
                   </tr>
                 ))
               )}
             </tbody>
           </table>
 
-          {/* ✅ หัวข้อ 2: แผนการประเมินความรู้ */}
+          {/* Evaluation Plan Table */}
           <h3>2. แผนการประเมินความรู้</h3>
 
-          {/* ✅ หัวข้อย่อย 2.1 การวัดผล */}
+          {/* Subsection 2.1 Evaluation */}
           <h4>2.1 การวัดผล</h4>
-
           <table className="evaluation-plan-table">
             <thead>
               <tr>
@@ -77,20 +98,19 @@ const MQA3Insert5 = () => {
               ) : (
                 evaluationPlan.map((row, index) => (
                   <tr key={index}>
-                    <td>{row.activity}</td>
-                    <td className="text-left">{row.learningOutcome}</td>
-                    <td className="text-left">{row.evaluationMethod}</td>
-                    <td>{row.evaluationWeek}</td>
-                    <td>{row.evaluationWeight}</td>
+                    <td>{row.assessment_plan_id}</td> {/* แสดงกิจกรรมที่ */}
+                    <td className="text-left">{row.learning_outcome}</td> {/* แสดงผลการเรียนรู้ */}
+                    <td className="text-left">{row.evaluation_method}</td> {/* แสดงวิธีการประเมิน */}
+                    <td>{row.assessment_week}</td> {/* แสดงสัปดาห์ที่ประเมิน */}
+                    <td>{row.assessment_weight}</td> {/* แสดงสัดส่วนการประเมินผล */}
                   </tr>
                 ))
               )}
             </tbody>
           </table>
 
-          {/* ✅ หัวข้อย่อย 2.2 เกณฑ์ค่าระดับคะแนน */}
+          {/* Grading Table */}
           <h4>2.2 เกณฑ์ค่าระดับคะแนน</h4>
-
           <table className="grading-table">
             <thead>
               <tr>
@@ -134,19 +154,21 @@ const MQA3Insert5 = () => {
             </tbody>
           </table>
 
-          {/* ✅ หมายเหตุ */}
+          {/* Notes */}
           <p className="grading-note">
             <strong>หมายเหตุ :</strong> กำหนดการเรียนการสอนตามแผนประเมินผลการเรียนรู้นี้อาจเปลี่ยนแปลงได้ตามประกาศของมหาวิทยาลัย
             และ/หรือข้อตกลงระหว่างผู้เรียนกับผู้สอนของแต่ละวิชาเขต
           </p>
         </div>
 
-        {/* ✅ ปุ่มย้อนกลับ & ถัดไป */}
+        {/* Navigation Buttons */}
         <div className="button-container5">
           <button type="button" className="back-btn5" onClick={() => navigate("/mqa3-insert4")}>
             ย้อนกลับ
           </button>
-          <button type="button"className="fetch-btn5"onClick={() => {console.log("คลิกปุ่มดึงข้อมูล");}}>ดึงข้อมูล</button>
+          <button type="button" className="fetch-btn5" onClick={handleFetchData}>
+            ดึงข้อมูล
+          </button>
           <button type="button" className="next-btn5" onClick={() => navigate("/mqa3-insert6")}>
             ถัดไป
           </button>
