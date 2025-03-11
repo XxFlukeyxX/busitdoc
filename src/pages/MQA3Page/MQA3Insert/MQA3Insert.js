@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // ✅ นำเข้า useNavigate
-import "./MQA3Insert.css"; // ✅ อ้างอิงไฟล์ CSS ให้ตรงกับโครงสร้างโฟลเดอร์
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios"; // ✅ ใช้ axios เพื่อเรียก API
+import "./MQA3Insert.css";
 
 const MQA3Insert = () => {
-  const navigate = useNavigate(); // ✅ ใช้เพื่อเปลี่ยนหน้า
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     courseCode: "",
     courseName: "",
@@ -18,22 +19,73 @@ const MQA3Insert = () => {
     lastUpdate: "",
   });
 
-  // ฟังก์ชันจัดการการเปลี่ยนค่าในช่องอินพุต
+  const [loading, setLoading] = useState(false);
+
+  // ✅ โหลดข้อมูลจาก localStorage หรือ sessionStorage
+  useEffect(() => {
+    const savedData = localStorage.getItem("mqa3_course_data");
+    if (savedData) {
+      try {
+        setFormData(JSON.parse(savedData)); // ✅ แปลง JSON เป็น Object ก่อนเซ็ตค่า
+      } catch (error) {
+        console.error("Error parsing localStorage data:", error);
+      }
+    }
+  }, []);
+
+  // ✅ บันทึกข้อมูลลง Local Storage ทุกครั้งที่ formData เปลี่ยน
+  useEffect(() => {
+    if (formData.courseCode) { // ✅ บันทึกเฉพาะกรณีที่มีข้อมูล
+      localStorage.setItem("mqa3_course_data", JSON.stringify(formData));
+    }
+  }, [formData]);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // ฟังก์ชันดึงข้อมูล (จะเชื่อมต่อ API ในอนาคต)
-  const handleFetchData = () => {
-    console.log("Fetching data... (ในอนาคตจะเชื่อม API)");
-    // 🚀 ในอนาคตสามารถดึงข้อมูลจาก API และอัปเดต state formData ได้
+  // ฟังก์ชันดึงข้อมูลจาก API
+  const handleFetchData = async () => {
+    if (!formData.courseCode.trim()) {
+      alert("กรุณากรอกรหัสวิชาก่อนดึงข้อมูล");
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const response = await axios.get(`http://127.0.0.1:5000/course/${formData.courseCode}`);
+      console.log("API Response:", response.data); // 🔍 Debug ตรงนี้
+
+      if (response.data) {
+        setFormData({
+          ...formData,
+          courseName: response.data.course_name || "",
+          credit: response.data.credit_details || "",
+          curriculum: response.data.curriculum_detail || "",
+          major: response.data.category_type || "",
+          instructor: response.data.teacher_name || "",
+          semester: response.data.semester || "",
+          prerequisite: response.data.pre_requisites || "",
+          corequisite: response.data.co_requisites || "",
+          location: response.data.location || "",
+          lastUpdate: response.data.last_updated || "",
+        });
+      } else {
+        alert("ไม่พบข้อมูลรายวิชา");
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      alert("เกิดข้อผิดพลาดในการดึงข้อมูล");
+    } finally {
+      setLoading(false);
+    }
   };
 
   // ฟังก์ชันจัดการการกดปุ่มถัดไป
   const handleNext = (e) => {
     e.preventDefault();
     console.log("Form Data:", formData);
-    navigate("/mqa3-insert2"); // ✅ เปลี่ยนเส้นทางไปยังหน้า MQA3Insert2
+    navigate("/mqa3-insert2");
   };
 
   return (
@@ -102,9 +154,10 @@ const MQA3Insert = () => {
           </div>
         </div>
 
-        {/* ✅ ปุ่ม "ดึงข้อมูล" และ "ถัดไป" บนบรรทัดเดียวกัน */}
         <div className="form-submit">
-          <button type="button" className="fetch-btn" onClick={handleFetchData}>ดึงข้อมูล</button>
+          <button type="button" className="fetch-btn" onClick={handleFetchData} disabled={loading}>
+            {loading ? "กำลังโหลด..." : "ดึงข้อมูล"}
+          </button>
           <button type="submit" className="next-btn">ถัดไป</button>
         </div>
       </form>
